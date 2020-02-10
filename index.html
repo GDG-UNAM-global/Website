@@ -3,102 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>GDG UNAM</title>
-  <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,400,700|Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <div>
-    <div class="container-header">
-      <h1>Headings</h1>
-    </div>
-    <hr>
-    <h1>Quienes somos?</h1>
-    <br>
-    <br>
-    <h2>Integrantes</h2>
-    <br>
-    <br>
-    <h3>Planteles</h3>
-    <br>
-    <br>
-    <h4>Ingeniería en Computación</h4>
-    <br>
-    <br>
-    <h5>Aarón</h5>
-    <br>
-    <br>
-    <h6>Frontend</h6>
-    <br>
-    <br>
-  </div>
-  <br>
-  <div>
-    <div class="container-header">
-      <h1>Links</h1>
-    </div>
-    <hr>
-    <a href="#link" id="link">Links go to:</a>
-  </div>
-  <br>
-  <div>
-    <div class="container-header">
-      <h1>Paragraph</h1>
-    </div>
-    <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, culpa cum cumque deleniti deserunt
-      dignissimos ex harum illum iusto laboriosam minima modi molestias, nam nobis odit optio praesentium quae quos,
-      saepe sunt tempore vero voluptatibus. <b>Cupiditate dignissimos ducimus esse est fugiat</b> ipsam, laborum libero quos
-      sunt. Aut autem deserunt exercitationem incidunt nam nisi quia sapiente similique voluptates? Amet deleniti,
-      <a href="#italix" id="italic"><i>dolorem doloribus fugit ipsa similique voluptatibus?</i></a> Ad aliquam amet aut beatae blanditiis, corporis dicta
-      dignissimos dolores doloribus ducimus eos eum excepturi exercitationem harum laborum laudantium maxime nemo
-      perferendis placeat quam quia recusandae sapiente temporibus totam veritatis! Accusamus debitis ipsum quasi
-      reiciendis.</p>
-  </div>
-  <br>
-  <div>
-    <div class="container-header">
-      <h1>List</h1>
-    </div>
-    <hr>
-    <br>
-    <h2>Ordered list</h2>
-    <br>
-    <ol class="mx-3-rem">
-      <li>Element 1</li>
-      <li>Element 2</li>
-      <li>Element 3</li>
-      <li>Element 4</li>
-      <li>Element 5</li>
-    </ol>
-    <br>
-    <h2>Unordered list</h2>
-    <br>
-    <ul class="mx-3-rem">
-      <li>Element 1</li>
-      <li>Element 2</li>
-      <li>Element 3</li>
-      <li>Element 4</li>
-      <li>Element 5</li>
-    </ul>
-    <br>
-    <br>
-    <h2>Description List</h2>
-    <dl class="mx-3-rem">
-      <dt>Bread</dt>
-      <dd>A baked food made of flour.</dd>
-      <dt>Coffee</dt>
-      <dd>A drink made from roasted coffee beans.</dd>
-    </dl>
-  </div>
-  <div>
-    <div class="container-header">
-      <h1>Blockquotes</h1>
-    </div>
-    <hr>
-    <blockquote>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, architecto autem consectetur
-      consequatur dignissimos natus nihil possimus saepe tempore vel?
-    </blockquote>
-  </div>
+<body class="body">
+<div class="my-2-rem">
+  <h1>Button</h1>
+  <button class="gdg--btn">Button</button>
+</div>
+<div class="my-2-rem">
+  <h2>Primary</h2>
+  <button class="gdg--btn gdg--btn__primary">Button</button>
+  <h2>Secondary</h2>
+  <button class="gdg--btn gdg--btn__secondary">Button</button>
+  <h2>Tertiary</h2>
+  <button class="gdg--btn gdg--btn__tertiary">Button</button>
+</div>
+<div class="my-2-rem">
+  <h2>Anchor</h2>
+  <a href="" class="gdg--btn">Button</a>
+</div>
+<div class="my-2-rem">
+  <h2>Sizes</h2>
+  <button class="gdg--btn  gdg--btn__primary  gdg--btn__small">Small</button>
+  <button class="gdg--btn  gdg--btn__primary">Default</button>
+  <button class="gdg--btn  gdg--btn__primary  gdg--btn__large">Large</button>
+  <button class="gdg--btn  gdg--btn__primary  gdg--btn__huge">Huge</button>
+</div>
+<div class="my-2-rem">
+  <h2>Disabled</h2>
+  <button class="gdg--btn" disabled>Disabled</button>
+  <button class="gdg--btn  gdg--btn__disabled">Disabled</button>
+</div>
+<div class="my-2-rem">
+  <h2>Animated</h2>
+  <h4>FadeIn</h4>
+  <button class="[ gdg--btn  gdg--btn__primary  gdg--btn__animated ]  [ animated  fadeInUp ]">Animated</button>
+  <h4>Effect Scale</h4>
+  <button class="gdg--btn  gdg--btn__primary  gdg--btn__primary--animated  gdg--btn__animated">Primary Button</button>
+  <button class="gdg--btn  gdg--btn__secondary  gdg--btn__secondary--animated  gdg--btn__animated">Secondary Button</button>
+  <button class="gdg--btn  gdg--btn__tertiary  gdg--btn__tertiary--animated  gdg--btn__animated">Tertiary Button</button>
+</div>
 </body>
 </html>

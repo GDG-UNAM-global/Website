@@ -1,0 +1,36 @@
+@import "scss/abstracts/variables";
+
+@mixin button__size($size) {
+  padding: calc( #{ $size } * 1 ) calc( 2 * #{ $size } );
+}
+
+@mixin button__shadow--animation {
+
+  &:hover {
+
+    outline: none;
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 0.5rem rgba( $color-black, 0.1 );
+
+    &::after {
+
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+
+    }
+
+  }
+
+  &:active,
+  &:focus {
+
+    transform: translateY(-1px);
+    box-shadow: 0 1rem 0.5rem rgba( $color-black, 0.2 );
+
+  }
+
+}
+
+@mixin button__animated--background-color($color) {
+  background-color: $color;
+}

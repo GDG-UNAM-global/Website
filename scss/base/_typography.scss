@@ -54,17 +54,18 @@ h6 {
   font-weight: 700;
 }
 
-
 p,
 a,
 ul,
 ol,
 dl,
 blockquote {
+  font-family: inherit;
   font-weight: 300;
 }
 
 dd {
+  font-family: inherit;
   margin: 0 3rem;
 }
 
@@ -75,17 +76,20 @@ a {
 
 strong,
 b {
+  font-family: inherit;
   font-weight: 400;
 }
 
 ul,
 ol,
 dl {
+  font-family: inherit;
   font-size: 1.5rem;
   font-weight: 300;
 }
 
 blockquote {
+  font-family: inherit;
   font-size: 1.8rem;
   font-style: italic;
   text-decoration: underline;

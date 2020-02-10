@@ -1,26 +1,43 @@
+@import "scss/abstracts/variables";
+
 *,
 *::after,
 *::before {
+
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+
 }
 
 html {
+
   /**
    * The reason to change the font size it's to get 1rem = 10px,
    * the default value is 1 rem = 16px
    * So, if 1 rem = 10px, then ( 10px / 16px ) * 100% = 62.5%
    * At the end the scale is 1:10 (rem:px)
    */
+
   font-size: 62.5%; // <-- 1 rem = 10px
+
 }
 
 body {
+
   /*
    * I will use Grid Layout System, to get a better
    * responsive design on this project
    */
+
   display: grid;
   box-sizing: border-box;
+
+}
+
+.body {
+
+  background-color: $color-white;
+  color: $color-grey-800;
+
 }

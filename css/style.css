@@ -1,3 +1,30 @@
+/*****************************************\
+             #Section-header
+\*****************************************/
+/*****************************************\
+             #Section-color
+\*****************************************/
+/*****************************************\
+          #Section-color-grey
+\*****************************************/
+/*****************************************\
+             #Section-header
+\*****************************************/
+/*****************************************\
+             #Section-color
+\*****************************************/
+/*****************************************\
+          #Section-color-grey
+\*****************************************/
+/*****************************************\
+             #Section-header
+\*****************************************/
+/*****************************************\
+             #Section-color
+\*****************************************/
+/*****************************************\
+          #Section-color-grey
+\*****************************************/
 *,
 *::after,
 *::before {
@@ -22,6 +49,19 @@ body {
   display: grid;
   box-sizing: border-box; }
 
+.body {
+  background-color: #fafafa;
+  color: #424242; }
+
+/*****************************************\
+             #Section-header
+\*****************************************/
+/*****************************************\
+             #Section-color
+\*****************************************/
+/*****************************************\
+          #Section-color-grey
+\*****************************************/
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -72,9 +112,11 @@ ul,
 ol,
 dl,
 blockquote {
+  font-family: inherit;
   font-weight: 300; }
 
 dd {
+  font-family: inherit;
   margin: 0 3rem; }
 
 p,
@@ -83,15 +125,18 @@ a {
 
 strong,
 b {
+  font-family: inherit;
   font-weight: 400; }
 
 ul,
 ol,
 dl {
+  font-family: inherit;
   font-size: 1.5rem;
   font-weight: 300; }
 
 blockquote {
+  font-family: inherit;
   font-size: 1.8rem;
   font-style: italic;
   text-decoration: underline; }
@@ -99,9 +144,220 @@ blockquote {
 .mx-3-rem {
   margin: 0 3rem; }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 .container-header {
   background-color: lightcoral;
   color: whitesmoke; }
+
+/**********************************************\
+          #Section-button-imports
+\**********************************************/
+/*****************************************\
+             #Section-header
+\*****************************************/
+/*****************************************\
+             #Section-color
+\*****************************************/
+/*****************************************\
+          #Section-color-grey
+\*****************************************/
+/*****************************************\
+             #Section-header
+\*****************************************/
+/*****************************************\
+             #Section-color
+\*****************************************/
+/*****************************************\
+          #Section-color-grey
+\*****************************************/
+.body {
+  padding: 5rem; }
+
+h2, h3, h4 {
+  margin: 2rem 0;
+  line-height: 1; }
+
+/**********************************************\
+               #Section-button
+\**********************************************/
+/**
+ * Buttons
+ *
+ */
+.gdg--btn {
+  /**********************************************\
+           #Section-button-anchor-tag
+  \**********************************************/
+  /**********************************************\
+           #Section-button-disabled
+  \**********************************************/
+  /**********************************************\
+             #Section-button-primary
+  \**********************************************/
+  /**********************************************\
+           #Section-button-secondary
+  \**********************************************/
+  /**********************************************\
+             #Section-button-tertiary
+  \**********************************************/
+  /**********************************************\
+            #Section-button-secondary
+                       &
+            #Section-button-tertiary
+  \**********************************************/
+  /**********************************************\
+            #Section-button-size--small
+  \**********************************************/
+  /**********************************************\
+          #Section-button-size--large
+  \**********************************************/
+  /**********************************************\
+            #Section-button-size--huge
+  \**********************************************/ }
+  .gdg--btn, .gdg--btn:link, .gdg--btn:visited {
+    padding: calc( 1.5rem * 1) calc( 2 * 1.5rem);
+    border: 1px solid transparent;
+    border-radius: .8rem;
+    cursor: pointer;
+    color: black;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-family: inherit;
+    font-weight: inherit;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .2s; }
+  .gdg--btn__disabled, .gdg--btn:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    border: 0 solid transparent;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: auto; }
+    .gdg--btn__disabled:focus, .gdg--btn__disabled:active, .gdg--btn:disabled:focus, .gdg--btn:disabled:active {
+      box-shadow: 0 0 0 transparent;
+      border: 0 solid transparent; }
+  .gdg--btn::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .8rem;
+    z-index: -1;
+    transition: all .4s; }
+  .gdg--btn__primary {
+    background-color: #1975d2;
+    color: #fafafa; }
+    .gdg--btn__primary:hover {
+      outline: none;
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.1); }
+      .gdg--btn__primary:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
+    .gdg--btn__primary:active, .gdg--btn__primary:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2); }
+    .gdg--btn__primary--animated:hover::after {
+      background-color: #1975d2; }
+  .gdg--btn__secondary {
+    border: 1px solid black;
+    background-color: #fafafa;
+    color: #1975d2;
+    /**********************************************\
+          #Section-button-secondary-hover
+    \**********************************************/ }
+    .gdg--btn__secondary:hover {
+      outline: none;
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.1); }
+      .gdg--btn__secondary:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
+    .gdg--btn__secondary:active, .gdg--btn__secondary:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2); }
+    .gdg--btn__secondary:hover {
+      background-color: #1975d2;
+      border: 1px solid #1975d2;
+      color: #fafafa; }
+    .gdg--btn__secondary--animated:hover::after {
+      border: 1px solid black;
+      background-color: #fafafa; }
+  .gdg--btn__tertiary {
+    background-color: transparent; }
+    .gdg--btn__tertiary:hover {
+      outline: none;
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.1); }
+      .gdg--btn__tertiary:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
+    .gdg--btn__tertiary:active, .gdg--btn__tertiary:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2); }
+    .gdg--btn__tertiary:hover {
+      border: 1px solid black;
+      background-color: #fafafa;
+      color: #1975d2; }
+    .gdg--btn__tertiary--animated:hover::after {
+      background-color: #fafafa;
+      color: #1975d2; }
+  .gdg--btn__secondary, .gdg--btn__tertiary {
+    color: #1975d2; }
+  .gdg--btn__small {
+    padding: calc( 1rem * 1) calc( 2 * 1rem); }
+  .gdg--btn__large {
+    padding: calc( 2rem * 1) calc( 2 * 2rem);
+    font-size: 1.6rem; }
+  .gdg--btn__huge {
+    padding: calc( 2.5rem * 1) calc( 2 * 2.5rem);
+    font-size: 1.8rem; }
+
+/*****************************************\
+        #Section-scroll-imports
+\*****************************************/
+/*****************************************\
+             #Section-header
+\*****************************************/
+/*****************************************\
+             #Section-color
+\*****************************************/
+/*****************************************\
+          #Section-color-grey
+\*****************************************/
+/*****************************************\
+        #Section-scroll-width
+\*****************************************/
+::-webkit-scrollbar {
+  width: 9px; }
+
+/*****************************************\
+        #Section-scroll-track
+\*****************************************/
+::-webkit-scrollbar-track {
+  background-color: rgba(158, 158, 158, 0.4);
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
+
+/*****************************************\
+        #Section-scroll-handle
+\*****************************************/
+::-webkit-scrollbar-thumb {
+  background-color: rgba(25, 117, 210, 0.4);
+  border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #1975d2; }
 
 /*
 @import

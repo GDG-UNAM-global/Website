@@ -1,0 +1,219 @@
+/**********************************************\
+          #Section-button-imports
+\**********************************************/
+@import "scss/abstracts/variables";
+@import "scss/abstracts/mixins";
+
+.body {
+  padding: 5rem;
+}
+
+h2, h3, h4 {
+  margin: 2rem 0;
+  line-height: 1;
+}
+
+
+/**********************************************\
+               #Section-button
+\**********************************************/
+
+/**
+ * Buttons
+ *
+ */
+.gdg--btn {
+
+
+
+  /**********************************************\
+           #Section-button-anchor-tag
+  \**********************************************/
+  &,
+  &:link,
+  &:visited {
+
+    @include button__size(1.5rem);
+
+    border: 1px solid transparent;
+    border-radius: .8rem;
+    cursor: pointer;
+    color: $color-black;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-family: inherit;
+    font-weight: inherit;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .2s;
+
+  }
+
+
+
+  /**********************************************\
+           #Section-button-disabled
+  \**********************************************/
+  &__disabled,
+  &:disabled {
+
+    background-color: rgba( $color-black, 0.3 );
+    box-shadow: 0 0 0 rgba( $color-black, 0 );
+    border: 0 solid transparent;
+    color:  rgba( $color-black, 0.5 );
+    cursor: auto;
+
+    &:focus,
+    &:active {
+
+      box-shadow: 0 0 0 transparent;
+      border: 0 solid transparent;
+
+    }
+
+  }
+
+
+
+  &::after {
+
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .8rem;
+    z-index: -1;
+    transition: all .4s;
+
+  }
+
+
+  /**********************************************\
+             #Section-button-primary
+  \**********************************************/
+  &__primary {
+
+    @include button__shadow--animation;
+
+    background-color: $color-primary;
+    color: $color-white;
+
+    &--animated:hover::after {
+
+      background-color: $color-primary;
+
+    }
+
+  }
+
+
+
+  /**********************************************\
+           #Section-button-secondary
+  \**********************************************/
+  &__secondary {
+
+    @include button__shadow--animation;
+
+    border: 1px solid $color-black;
+    background-color: $color-white;
+    color: $color-primary;
+
+    /**********************************************\
+          #Section-button-secondary-hover
+    \**********************************************/
+    &:hover {
+
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      color: $color-white;
+
+    }
+
+    &--animated:hover::after {
+
+      border: 1px solid $color-black;
+      background-color: $color-white;
+
+    }
+
+  }
+
+
+
+  /**********************************************\
+             #Section-button-tertiary
+  \**********************************************/
+  &__tertiary {
+
+    @include button__shadow--animation;
+
+    background-color: transparent;
+
+    &:hover {
+
+      border: 1px solid $color-black;
+      background-color: $color-white;
+      color: $color-primary;
+
+    }
+
+    &--animated:hover::after {
+
+      background-color: $color-white;
+      color: $color-primary;
+
+    }
+
+  }
+
+
+
+  /**********************************************\
+            #Section-button-secondary
+                       &
+            #Section-button-tertiary
+  \**********************************************/
+  &__secondary,
+  &__tertiary {
+
+    color: $color-primary;
+
+  }
+
+
+
+  /**********************************************\
+            #Section-button-size--small
+  \**********************************************/
+  &__small { @include button__size(1rem); }
+
+
+
+  /**********************************************\
+          #Section-button-size--large
+  \**********************************************/
+  &__large {
+
+    @include button__size(2rem);
+    font-size: 1.6rem;
+
+  }
+
+
+
+  /**********************************************\
+            #Section-button-size--huge
+  \**********************************************/
+  &__huge {
+
+    @include button__size(2.5rem);
+    font-size: 1.8rem;
+
+  }
+
+}
